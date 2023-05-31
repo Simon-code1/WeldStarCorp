@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% block content %}
+
+<div class="project-block" >
+
+    <div class="page-project-name">
+        <p class="label-text">{{project.name}}</p>
+        <p class="border-bot"> </p>
+    </div>
+    
+    <div class="page-project-content">
+        <div class="page-project-text">
+            <p>{{ project.description}}</p>
+           
+            <a class="project_btn" href="/#projects">Back to projects</a>
+        </div>
+         
+        <div class="page-project-image">
+            <img src="{{ project.image.url }}" alt="{{ project.name }} Image" width="500" height="500">
+        </div>
+    </div>
+    
+
+</div>
+
+{% endblock %}

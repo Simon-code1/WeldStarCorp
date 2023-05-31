@@ -1,0 +1,17 @@
+{%load static%}
+<h2 class="label-text" id="projects">Projects</h2>
+<p class="border-bot"> </p>
+
+<div class="projects-block" >
+    <div class="project-container">
+        {% for project in projects %}
+            <a href="{% url 'base:project_detail' slug=project.slug %}" class="project-card">
+                <div class="project-card">
+                    <img src="{{ project.image.url }}" alt="image">
+                    <div class="project-name">{{project.name}}</div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+

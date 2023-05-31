@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeldStar Corporation </title>
+    
+    <link rel="stylesheet" type="text/css" href=" {% static '/css/style.css' %} ">
+</head>
+<body>
+    {% include 'base/nav.html' %}
+    {% include 'base/main_sc.html' %}
+    {% include 'base/services.html' %}
+    {% include 'base/about.html' %}
+    {% include 'base/projects.html' %}
+    {% include 'base/contact_us.html' %}
+
+    <script src="{% static '/javascript/javascript.js' %}"></script>
+</body>
+</html>

@@ -1,27 +1,26 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% block content %}
-
-<div class="project-block" >
-
+<div class="project-block">
+    <!-- Display project name, description, and other details -->
     <div class="page-project-name">
-        <p class="label-text">{{project.name}}</p>
-        <p class="border-bot"> </p>
+        <p class="label-text">{{ project.name }}</p>
+        <p class="border-bot"></p>
     </div>
-    
     <div class="page-project-content">
         <div class="page-project-text">
-            <p>{{ project.description}}</p>
-           
-            <a class="project_btn" href="/#projects">Back to projects</a>
+            <p>{{ project.description }}</p>
+            <a class="project_btn" href="../#projects">Back to projects</a>
         </div>
-         
-        <div class="page-project-image">
-            <img src="{{ project.image.url }}" alt="{{ project.name }} Image" width="500" height="500">
+        <div class="page-project-images">
+            {% for project_image in project.images.all %}
+                <div class="page-project-image">
+                    <a href="{{ project_image.image.url }}" target="_blank">
+                        <img src="{{ project_image.image.url }}" alt="{{ project.name }} Image" width="371" height="267">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
-    
-
 </div>
-
 {% endblock %}

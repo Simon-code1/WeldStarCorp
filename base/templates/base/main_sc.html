@@ -1,8 +1,22 @@
-{% load static%}
+{% load static %}
 
-<div class="main_sc-block"> 
-    <p class="main-text">Over 20 years in business</p>
+{% block content %}
+<div class="main_sc-block">
+    <div class="slider-container">
+        <div class="slider-slide">
+            <img src="{% static 'images/bc.jpg' %}" alt="Slide 1">
+            <p class="slide-text">20 years in buissnes</p>
+        </div>
+        <div class="slider-slide">
+            <img src="{% static 'images/bc2.jpg' %}" alt="Slide 2">
+            <p class="slide-text">Thousands different projects</p>
+        </div>
+        <div class="slider-slide">
+            <img src="{% static 'images/bc3.jpg'%} " alt="Slide 3">
+            <p class="slide-text">High quality!</p>
+        </div>
+    </div>
     <a class="main_sc-link" href="#contact">RFQ</a>
-    
-    
-</div> 
+</div>
+
+{% endblock content %}

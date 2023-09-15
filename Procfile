@@ -1,1 +1,1 @@
-web: gunicorn My_Portfolio.wsgi
+web: gunicorn Weld_Star_Corporation.wsgi

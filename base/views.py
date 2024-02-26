@@ -35,7 +35,7 @@ def home(request):
         '''
 
         try:
-            send_mail(email_subject, email_message,'settings.EMAIL_HOST_USER',[data['email_address']], fail_silently=False)
+            send_mail(email_subject, email_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER], fail_silently=False)
             messages.success(request, "Message sent successfully!")
         except Exception as e:
             messages.error(request, f"An error occurred while sending the message: {str(e)}")
